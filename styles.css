@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(todo2.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    justify-items: center;
+}
+
+.header {
+    text-align: center;
+    align-self: end;
+}
+
+.heading {
+    padding-right: 8px;
+    font-family: 'Libre Baskerville', serif;
+    color: Black;
+    font-size: 3rem;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(45deg, rgba(255,173,124,1) 0%, rgba(73,125,189,1) 100%);
+}
+.heading :first-of-type {
+    color: #fff;
+}
+.heading::after {
+    content: '\2713';
+    color: green;
+    font-size: 3.5rem;
+}
+
+
+@media screen and (min-width: 600px) {
+    .heading {
+        background-image: none;
+        font-size: 4rem;
+    } 
+    .heading :first-of-type {
+        border-radius: 0.5rem;
+        background-image: linear-gradient(45deg, rgba(255,173,124,1) 0%, rgba(73,125,189,1) 100%);
+    }
+}
+
+
+.task__container {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 15px -4px;
+    margin-top: 1rem;
+}
+.container {
+    align-self: top;
+    padding-top: 2.7rem;
+}
+
+.new-task {
+    display: none;
+}
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+}
+#task__input {
+    border-radius: 5px;
+    background: #fff;
+    border: .10rem solid black;
+    margin-right: 0.3rem;
+    padding: 5px 10px 5px 5px;
+    font-size: 1.1rem;
+}
+
+#task__input:focus {
+    outline: none;
+    border-color: forestgreen;
+
+}
+#task__btn {
+    font-size: 1.1rem;
+    border: 0.10rem solid black;
+    padding: 0 10px;
+    background: none;
+    border-radius: 5px;
+    color: black;
+    transition: 200ms;
+}
+#task__btn:hover {
+    background: forestgreen;
+    color: #fff;
+    border: 0.10rem solid forestgreen;
+}
+
+.task__container-1 p {
+    color: rgb(205, 4, 4);
+    width: max-content;
+    margin: 1rem auto 0;
+}
+
+@media screen and (min-width: 600px) {
+    #task__input {
+        padding: 5px 200px 5px 5px;
+    }
+    #task__btn {
+        padding: 0 30px;
+    }
+}
+
+.task {
+    display: flex;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+.task button {
+    margin-right: 0.2rem;
+    padding: 7px 10px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    transition: 200ms;
+    height: max-content;
+    align-self: center;
+}
+.check__btn:hover {
+    background: forestgreen;
+    color: #fff;
+    border: 1px solid forestgreen;
+}
+.trash__btn:hover {
+    background: red;
+    color: #fff;
+    border: 1px solid red;
+}
+.trash__btn:active {
+    background: rgb(176, 7, 7);
+    color: #fff;
+    border: 1px solid rgb(176, 7, 7);
+}
+.delete-all {
+    width: 7rem;
+    font-size: 0.9rem;
+    background: none;
+    display: block;
+    margin: 1.5rem auto 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px 0;
+    transition: 200ms;
+}
+.delete-all:hover {
+    background: red;
+    color: #fff;
+    border: 1px solid red;
+}
+.delete-all:active {
+    background: rgb(176, 7, 7);
+    color: #fff;
+    border: 1px solid rgb(176, 7, 7);
+}
+
+.task p{
+    overflow: scroll;
+    list-style: none;
+    flex: 1;
+    width: 3rem;
+    align-self: center;
+    border-bottom: 1px solid black;
+    margin-right: 2rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+.checked {
+    color: forestgreen;
+}
+.checked p::before {
+    content: '\2713';
+    color: green;
+    font-size: 1.2rem;
+}
+
+button {
+    cursor: pointer;
+}
